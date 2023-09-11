@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:paddingEnd="8dp"
+    android:paddingStart="8dp"
+        android:textColor="@color/red"
+        android:textSize="@dimen/asterisk_size"
+        android:text="@string/asterisk"
+        android:layout_weight="0.1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+

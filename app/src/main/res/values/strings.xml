@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">GeokrishiFarmCropHealth</string>
+    <string name="app_name">Geokrishi Farm CropHealth</string>
+    <string name="asterisk">*</string>
+    <string name="choose_crop_or_livestock">बाली वा पशुधन छान्नुहोस्</string>
+    <string name="crop">बाली</string>
+    <string name="livestock">पशुधन</string>
+    <string name="crop_or_livestock">बाली वा पशुधन</string>
+    <string name="livestock_age">पशुधनको उमेर</string>
+    <string name="description">विवरण</string>
+    <string name="or">वा</string>
+    <string name="crop_health_audio_text">लेख्न नसके अब बोलेर आफ्नो समस्या राख्न सक्नुहुन्छ। आफ्नो आवाजमा समस्या राख्नको लागि तलको माइक आइकनमा क्लिक गर्नुहोस् ।</string>
+    <string name="upload_photo">फोटो अपलोड गर्नुहोस</string>
+    <string name="choose_file">फाइल छान्नुहोस्</string>
+    <string name="view_all_images">सबै तस्बिरहरू हेर्न यहाँ क्लिक गर्नुहोस्।</string>
+    <string name="send">पठाउनुहोस</string>
+    <string name="crop_health_level">बाली वा पशुधन सम्बन्धि प्रश्न पठाउनुहोस्</string>
+
+
+
+
+
+
 </resources>

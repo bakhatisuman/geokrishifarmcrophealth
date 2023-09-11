@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinator"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CropHealthActivity">
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/nsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnSend">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <!--            gender-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/choose_crop_or_livestock"
+                    android:textColor="@color/black_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgCropOrLiveStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:checkedButton="@id/rbCrop"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbCrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/green"
+                        android:text="@string/crop"
+                        android:textSize="18sp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/rbLiveStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:buttonTint="@color/green"
+                        android:text="@string/livestock"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textStyle="bold"
+                        android:textColor="@color/black_text"
+                        android:layout_weight="0.9"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/crop_or_livestock"
+                        android:textSize="18sp" />
+
+
+                    <include layout="@layout/mandatory_field" />
+
+                </LinearLayout>
+
+                <!--Title-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:textColorHint="@color/aluminium">
+
+                        <EditText
+                            android:id="@+id/cropHealthTag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_border"
+                            android:inputType="text"
+                            android:padding="12dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+
+                <ProgressBar
+                    android:id="@+id/tagProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cropOrLiveStockTagRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingStart="8dp"
+                    android:visibility="gone">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/liveStockAgeLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <!--android:theme="@style/MyEditText"-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:textColorHint="@color/aluminium">
+
+                        <EditText
+                            android:id="@+id/livestock_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_border"
+                            android:hint="@string/livestock_age"
+                            android:inputType="text"
+                            android:padding="12dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="14sp"
+                             />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <include layout="@layout/mandatory_field" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:textColor="@color/black_text"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="0.9"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textSize="18sp" />
+
+
+                    <include layout="@layout/mandatory_field" />
+
+                </LinearLayout>
+
+
+
+
+
+                <!--Description -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9"
+                        android:textColorHint="@color/aluminium"
+                        >
+
+                        <EditText
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_border"
+                            android:inputType="text|textMultiLine"
+                            android:maxLines="20"
+                            android:padding="12dp"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="12dp"
+                    android:padding="12dp"
+                    android:text="@string/or"
+                    android:textColor="@color/black_text"
+                    android:textSize="24sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="8dp"
+                    android:id="@+id/recordAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableBottom="@drawable/ic_mic_24"
+                    android:text="@string/crop_health_audio_text"
+                    android:textColor="@color/brown"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:weightSum="3"
+                    android:background="@color/light_grey"
+                    android:id="@+id/audioPlayPauseLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:tint="@color/grey"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_width="@dimen/media_player_button_w_h_for_response"
+                            android:layout_height="@dimen/media_player_button_w_h_for_response"
+                            android:layout_margin="8dp"
+                            app:srcCompat="@drawable/ic_hearing_24" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:visibility="gone"
+                            android:background="?attr/selectableItemBackground"
+                            android:id="@+id/pauseButton"
+                            android:layout_width="@dimen/media_player_button_w_h"
+                            android:layout_height="@dimen/media_player_button_w_h"
+                            android:layout_margin="16dp"
+                            app:srcCompat="@drawable/ic_pause" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:background="?attr/selectableItemBackground"
+                            android:id="@+id/playButton"
+                            android:layout_width="@dimen/media_player_button_w_h"
+                            android:layout_height="@dimen/media_player_button_w_h"
+                            android:layout_margin="16dp"
+                            app:srcCompat="@drawable/ic_play" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:background="?attr/selectableItemBackground"
+                            android:id="@+id/stopButton"
+                            android:layout_width="@dimen/media_player_button_w_h"
+                            android:layout_height="@dimen/media_player_button_w_h"
+                            android:layout_margin="16dp"
+                            app:srcCompat="@drawable/ic_stop" />
+
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:tint="@color/red"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:id="@+id/deleteButton"
+                        android:layout_width="@dimen/media_player_button_w_h"
+                        android:layout_height="@dimen/media_player_button_w_h"
+                        android:layout_margin="16dp"
+                        app:srcCompat="@drawable/ic_delete_24dp" />
+
+
+
+                </LinearLayout>
+
+
+                <!--file upload start here-->
+
+                <!-- Picture-->
+                <LinearLayout
+                    android:id="@+id/profilePicLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <RelativeLayout
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+
+                        android:layout_weight="0.9">
+
+                        <TextView
+                            android:id="@+id/upLoadPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
+                            android:text="@string/upload_photo"
+                            android:textColor="@color/brown"
+                            android:textStyle="bold" />
+
+
+
+                        <Button
+                            android:id="@+id/ivImageSelection"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/choose_file"
+                            android:textAllCaps="false" />
+                    </RelativeLayout>
+
+                    <include layout="@layout/mandatory_field" />
+
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:textSize="16sp"
+                    android:id="@+id/viewImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="@string/view_all_images"
+                    android:textColor="@color/green"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/firstViewLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.85"
+                        android:background="@color/light_grey" />
+
+                </LinearLayout>
+                <!--file upload ends here-->
+
+
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/healthImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="8dp"
+                    android:adjustViewBounds="true" />
+
+
+                <!-- <LinearLayout
+                    android:id="@+id/secondViewLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <View
+                        android:id="@+id/citizenImageView"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_weight="0.85"
+                        android:background="@color/light_grey" />
+
+                </LinearLayout>-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:text="@string/send"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

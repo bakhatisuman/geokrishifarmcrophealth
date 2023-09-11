@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="asterisk_size">22sp</dimen>
+    <dimen name="area_field">48dp</dimen>
+    <dimen name="area_field_height">48dp</dimen>
+    <dimen name="area_field_for_crop">80dp</dimen>
+    <dimen name="crop_text">12sp</dimen>
+    <dimen name="farm_text">13sp</dimen>
+    <dimen name="media_player_button_w_h">48dp</dimen>
+    <dimen name="media_player_button_w_h_for_response">32dp</dimen>
+
+    <!--google map button adjustment-->
+    <dimen name="map_btn_right_padding">12dp</dimen>
+    <dimen name="map_btn_padding_top">51dp</dimen>
+    <dimen name="card_center_text">30sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+</resources>
