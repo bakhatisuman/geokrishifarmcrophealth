@@ -3,6 +3,7 @@ package com.geokrishifarm.crophealth.repo
 import android.content.Context
 import android.util.Log
 import com.geokrishifarm.crophealth.features.crophealth.dto.CropHealthRequest
+import com.geokrishifarm.crophealth.features.crophealth.dto.TagItem
 import com.geokrishifarm.crophealth.framework.FLWResponse
 import com.geokrishifarm.crophealth.retrofit.APIService
 import com.geokrishifarm.crophealth.retrofit.NetworkModule
@@ -203,9 +204,9 @@ class CropHealthRepo(val context: Context, val apiService: APIService) {
     }
 
 
-    suspend fun test(page: Int) = flow<FLWResponse<String>> {
+    suspend fun sendTagListRequest(tag : String) = flow {
 
-        val retroHelper = RetroHelper<String>()
+        val retroHelper = RetroHelper<List<TagItem>>()
 
         try {
             Log.d(TAG,"inside ch repo")
@@ -214,10 +215,10 @@ class CropHealthRepo(val context: Context, val apiService: APIService) {
                 return@flow
             }
 
-            Log.d(TAG,page.toString())
+            Log.d(TAG,tag.toString())
             retroHelper.enqueue(
                 context,
-                apiService.test(page)
+                apiService.sendTagListRequest(tag)
             ).collect {
                 emit(it)
             }

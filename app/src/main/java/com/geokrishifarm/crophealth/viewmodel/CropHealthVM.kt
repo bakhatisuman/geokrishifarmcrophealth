@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.geokrishifarm.crophealth.R
 import com.geokrishifarm.crophealth.features.crophealth.dto.CropHealthRequest
+import com.geokrishifarm.crophealth.features.crophealth.dto.TagItem
 import com.geokrishifarm.crophealth.framework.FLWResponse
 import com.geokrishifarm.crophealth.repo.CropHealthRepo
 import io.reactivex.disposables.CompositeDisposable
@@ -19,8 +20,8 @@ class CropHealthVM(private val repo: CropHealthRepo) : ViewModel() {
        return repo.sendPostCropHealthQuery(request)
     }
 
-    suspend fun test(page : Int): Flow<FLWResponse<String>> {
-       return repo.test(page)
+    suspend fun sendTagListRequest(tag : String): Flow<FLWResponse<List<TagItem>>> {
+       return repo.sendTagListRequest(tag)
     }
 
 

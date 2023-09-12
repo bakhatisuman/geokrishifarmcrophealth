@@ -1,5 +1,6 @@
 package com.geokrishifarm.crophealth.retrofit
 
+import com.geokrishifarm.crophealth.features.crophealth.dto.TagItem
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.Response
@@ -24,6 +25,6 @@ interface APIService {
 
     ): Response<String>
 
-    @GET("plant/query/")
-    suspend fun test(@Query("page") page: Int): Response<String>
+    @GET("get/query/tags/")
+    suspend fun sendTagListRequest(@Query("type") tag: String): Response<List<TagItem>>
 }

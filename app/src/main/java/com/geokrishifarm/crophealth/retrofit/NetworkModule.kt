@@ -51,7 +51,7 @@ class NetworkModule {
         return OkHttpClient.Builder().addInterceptor { chain ->
             val original = chain.request()
 
-            val header : String? = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg4NDA4MTIzLCJqdGkiOiI0YTFmZGNlZmQ4ZjU0ZmM1OWNmZGI3YmJjNjhmOTRkYyIsInVzZXJfaWQiOjk1ODAzfQ.9kX4fWOXUwKFc8Krprz0zB_YRtmDedjwJl5f8l5D3aw"
+            val header : String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzg4NDA4MTIzLCJqdGkiOiI0YTFmZGNlZmQ4ZjU0ZmM1OWNmZGI3YmJjNjhmOTRkYyIsInVzZXJfaWQiOjk1ODAzfQ.9kX4fWOXUwKFc8Krprz0zB_YRtmDedjwJl5f8l5D3aw"
 //            val sessionManager = SessionManager.getInstance(context)
 //            val session = sessionManager.findOne()
 //            if (session != null) {

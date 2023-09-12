@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_marginBottom="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<de.hdodenhof.circleimageview.CircleImageView
+                android:layout_alignParentStart="true"
+                android:id="@+id/extPicture"
+                android:src="@drawable/profile"
+                android:layout_width="72dp"
+                android:layout_height="72dp"/>-->
+
+
+            <LinearLayout
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/black_text"
+                    android:textSize="18sp"
+                    android:id="@+id/livestockAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+                <TextView
+                    android:textSize="12sp"
+                    android:id="@+id/askedOn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:id="@+id/issueImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+
+            android:id="@+id/reviewRL"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/feedbackIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="8dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_feedback_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="top"
+                android:layout_toEndOf="@+id/feedbackIcon"
+                android:textColor="@color/green"
+                android:paddingBottom="4dp"
+                android:text="@string/view_response"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                android:id="@+id/viewAll"
+                android:layout_alignParentEnd="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:text="@string/view_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.cardview.widget.CardView
+                app:cardBackgroundColor="@color/light_grey"
+                android:layout_marginEnd="8dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                app:cardCornerRadius="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/audioPlayPauseLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/media_player_button_w_h_for_response"
+                        android:layout_height="@dimen/media_player_button_w_h_for_response"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ic_hearing_24"
+                        android:padding="6dp"
+                        android:tint="@color/grey"
+                        app:srcCompat="@drawable/ic_hearing_24" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pauseButton"
+                        android:layout_width="@dimen/media_player_button_w_h_for_response"
+                        android:layout_height="@dimen/media_player_button_w_h_for_response"
+                        android:layout_margin="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:tint="@color/grey"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_pause" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/playButton"
+                        android:layout_width="@dimen/media_player_button_w_h_for_response"
+                        android:layout_height="@dimen/media_player_button_w_h_for_response"
+                        android:layout_margin="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        app:srcCompat="@drawable/ic_play" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/stopButton"
+                        android:layout_width="@dimen/media_player_button_w_h_for_response"
+                        android:layout_height="@dimen/media_player_button_w_h_for_response"
+                        android:layout_margin="8dp"
+                        android:background="?attr/selectableItemBackground"
+                        app:srcCompat="@drawable/ic_stop" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:padding="8dp"
+            android:background="@color/aluminium"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="4dp"
+            android:id="@+id/answerRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_margin="4dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:visibility="gone"
+                android:padding="4dp"
+                android:drawablePadding="8dp"
+               android:drawableEnd="@drawable/ic_close_grey"
+                android:id="@+id/replyOfText"
+                android:textSize="14sp"
+                android:text="agadi ko feedback"
+                android:textStyle="italic"
+                android:layout_margin="4dp"
+                android:paddingStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <LinearLayout
+
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textSize="14sp"
+                    android:id="@+id/reply"
+                    android:background="@drawable/bg_transparent"
+                    android:hint="@string/write_feedback"
+                    android:textColor="@color/black_text"
+                    android:textColorHint="@color/aluminium"
+                    android:layout_weight="9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_gravity="bottom"
+                    app:srcCompat="@android:drawable/ic_menu_send"
+                    android:id="@+id/btnSend"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/noResponse"
+            android:textSize="16sp"
+            android:layout_toEndOf="@+id/feedbackIcon"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/no_response"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

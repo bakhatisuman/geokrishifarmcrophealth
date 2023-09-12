@@ -14,6 +14,19 @@
     <string name="view_all_images">सबै तस्बिरहरू हेर्न यहाँ क्लिक गर्नुहोस्।</string>
     <string name="send">पठाउनुहोस</string>
     <string name="crop_health_level">बाली वा पशुधन सम्बन्धि प्रश्न पठाउनुहोस्</string>
+    <string name="crop_eng">crop</string>
+    <string name="livestock_eng">livestock</string>
+    <string name="asked_date">सोधिएको मिति: </string>
+    <string name="view_all">सबै हेर्नुहोस</string>
+    <string name="no_response">कुनैपनि प्रतिक्रिया उपलब्ध छैन ।</string>
+    <string name="view_response">प्रतिक्रिया हेर्नुहोस्</string>
+    <string name="write_feedback">तपाईको प्रतिक्रिया लेख्नुहोस्</string>
+
+
+
+
+
+
 
 
 
